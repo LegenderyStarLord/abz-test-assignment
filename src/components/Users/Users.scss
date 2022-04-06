@@ -181,11 +181,11 @@ p.overflow::after {
 @media all and (max-width: 500px) {
   .main-block {
     padding-left: 15px;
-    max-width: 395px;
+    max-width: 410px;
     h2 {
       max-width: 20.5rem;
       padding-top: 115px;
-      padding-left: 0;
+      margin: 0 auto;
     }
 
     h3 {
@@ -200,7 +200,8 @@ p.overflow::after {
     grid-column-gap: 29px;
     margin-left: 0;
     .block {
-      max-width: 21rem;
+      width: 23rem;
+      margin: 0 auto;
     }
   }
 }
