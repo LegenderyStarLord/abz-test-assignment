@@ -178,9 +178,10 @@ p.overflow::after {
 
 
 //MOBILE SCREEN
-@media all and (max-width: 400px) {
+@media all and (max-width: 370px) {
   .main-block {
     padding-left: 15px;
+    max-width: 360px;
     h2 {
       max-width: 20.5rem;
       padding-top: 115px;
@@ -198,10 +199,8 @@ p.overflow::after {
     grid-row-gap: 29px;
     grid-column-gap: 29px;
     margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
     .block {
-      max-width: 21rem;
+      max-width: 20rem;
     }
   }
 }

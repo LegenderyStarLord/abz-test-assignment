@@ -14,7 +14,10 @@
 }
 
 //MOBILE SCREEN
-@media all and (max-width: 400px) {
+@media all and (max-width: 370px) {
+  .footer-container {
+    max-width: 360px;
+  }
   .footer-heading {
     padding-left: 15px;
   }

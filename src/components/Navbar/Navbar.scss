@@ -107,9 +107,12 @@ li {
 }
 
 //MOBILE SCREEN
-@media all and (max-width: 450px) {
+@media all and (max-width: 370px) {
   img {
     padding: 16px 0 12px 17px;
+  }
+  .navbar {
+    max-width: 360px;
   }
 }
 

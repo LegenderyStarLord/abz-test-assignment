@@ -187,11 +187,12 @@
 }
 
 //MOBILE SCREEN
-@media all and (max-width: 450px) {
+@media all and (max-width: 370px) {
   .first-section-wrapper {
     background-image: none;
   }
   .first-section {
+    max-width: 360px;
     background-color: #edecea;
     background-image:  url("../../assets/Banner_photo.jpg");
     background-repeat: no-repeat, repeat;
@@ -219,6 +220,7 @@
   }
 
   .second-section {
+    max-width: 360px;
     display: flex;
     flex-direction: column;
     padding-top: 73px;
