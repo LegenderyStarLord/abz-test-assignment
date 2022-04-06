@@ -309,7 +309,7 @@ input{
   position: absolute;
   display: inline-block;
   border: 2px solid $error-color;
-  color: $grey-color;
+  color: #7E7E7E;
   border-left: none;
   top: 0;
   padding: 12px 0 12.5px 25px;
@@ -327,7 +327,7 @@ input{
 .buttonFileUploadError {
   position: relative;
   outline: none !important;
-  border: 2px solid $error-color;
+  border: 2px solid #cb3d40;
   background: transparent;
   padding: 15px 14px 14px;
   top: 15px;
@@ -339,9 +339,12 @@ input{
   line-height: 26px;
 }
 
+
 .fileUploaded {
-  color: $black-color;
+  color: #000000
 }
+
+
 
 .helper-text {
   position: absolute;
@@ -350,8 +353,6 @@ input{
   font-size: 0.8rem;
 }
 
-
-//BIG SCREEN
 @media all and (min-width: 2500px) {
   .footprint-container {
     position: relative;
@@ -366,7 +367,6 @@ input{
   }
 }
 
-//TABLET SCREEN
 @media all and (max-width: 1000px) {
   .registration-main-block {
     h3 {
@@ -405,9 +405,7 @@ input{
   }
 }
 
-
-//MOBILE SCREEN
-@media all and (max-width:500px) {
+@media all and (max-width: 400px) {
   .second-section {
     height: 750px;
   }
@@ -488,6 +486,10 @@ input{
 
     }
   }
+
+
+
+
 }
 
 
