@@ -185,6 +185,7 @@ p.overflow::after {
     h2 {
       max-width: 20.5rem;
       padding-top: 115px;
+      padding-left: 0;
       margin: 0 auto;
     }
 
@@ -200,7 +201,7 @@ p.overflow::after {
     grid-column-gap: 29px;
     margin-left: 0;
     .block {
-      width: 23rem;
+      width: 24rem;
       margin: 0 auto;
     }
   }
