@@ -1,0 +1,116 @@
+.navbar-wrapper {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0 4px 4px -2px #000000;
+  -moz-box-shadow: 0 4px 4px -2px #000000;
+  box-shadow: 0 2px 3px -2px gray;
+}
+
+.navbar {
+  max-width: 64rem;
+  max-height: 58px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 10.25rem auto;
+  background-color: #fff;
+  transform: scale(1);
+
+}
+
+.nav-logo {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  padding: 16px 0 12px 60px;
+}
+
+ul {
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  list-style-type: none;
+  margin-left: 302px;
+  padding-left: 0;
+  padding-top: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+
+}
+
+li {
+  margin-right: 10.5px;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 10px 10px;
+    width: 100px;
+    outline: none;
+    &:hover {
+      color: #00BDD3;
+    }
+    &:active {
+      background-color: #e6f8fb;
+      border-radius: 4px;
+    }
+  }
+}
+
+.list-section {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 1px;
+  right: -12px;
+  display: none;
+}
+
+//BIG SCREEN
+@media all and (min-width: 2500px) {
+  .navbar {
+    min-width: 87rem;
+  }
+  .navbar-menu ul {
+    margin-left: 577px;
+  }
+}
+
+//TABLET SCREEN
+@media all and (max-width: 1000px) {
+  img {
+    padding: 16px 0 12px 31px;
+  }
+
+  .menu {
+    display: inline-block;
+    padding-top: 17px;
+    margin-right: 28px;
+    cursor: pointer;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+}
+
+//MOBILE SCREEN
+@media all and (max-width: 450px) {
+  img {
+    padding: 16px 0 12px 17px;
+  }
+}
+
+

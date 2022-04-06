@@ -1,0 +1,21 @@
+.footer-container {
+  background: #fff;
+  height: 57px;
+  text-align: center;
+  border-top: 1.5px solid #E0E0E0;
+}
+
+.footer-heading {
+  margin: 0 0 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 16px;
+}
+
+//MOBILE SCREEN
+@media all and (max-width: 400px) {
+  .footer-heading {
+    padding-left: 15px;
+  }
+}

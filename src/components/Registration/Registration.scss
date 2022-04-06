@@ -1,0 +1,493 @@
+@import "../../App";
+
+.registration-wrapper {
+  background-color: $background-color;
+}
+
+.registration-main-block {
+  max-width: 64rem;
+  margin: 0 auto;
+  background-color: $background-color;
+  text-align: center;
+  h2 {
+    @extend %font;
+    padding-top: 175px;
+    margin: 0 0 10px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  h3 {
+    @extend %font;
+    font-size: 22px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.registration-sub-block {
+  margin-top: 32px;
+}
+
+form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  .main-input-block{
+    position: relative;
+  }
+  .main-input {
+    position: relative;
+    align-self: center;
+    width: 380px;
+    height: 53px;
+    margin-top: -1px;
+    margin-bottom: 52px;
+    border: 1px solid $input-border;
+    border-radius: 4px;
+    background: transparent;
+    box-sizing: border-box;
+  }
+  .main-input-error {
+    border: 2px solid $error-color;
+    border-radius: 4px;
+    background: transparent;
+    width: 380px;
+    height: 53px;
+    margin-top: -1px;
+    margin-bottom: 52px;
+    align-self: center;
+    box-sizing: border-box;
+  }
+  .main-input:focus {
+    outline: none !important;
+    border: 2px solid $secondary-color;
+    color: $black-color;
+    box-sizing: border-box;
+  }
+  .main-input-error:focus {
+    outline: none !important;
+    border: 2px solid $error-color;
+    color: $black-color;
+    box-sizing: border-box;
+  }
+
+//MAIN INPUT ANIMATION STYLES
+
+  .main-input-label {
+    position: absolute;
+    left: 1.2rem;
+    top: 0.9rem;
+    padding: 0 0.5rem;
+    color: $grey-color;
+    cursor: text;
+    background-color: $background-color;
+    transition:
+            top 200ms ease-in,
+            left 200ms ease-in,
+            font-size 200ms ease-in,
+            color 200ms ease-in;
+  }
+
+  .main-input:focus ~ .main-input-label,
+  .main-input:not(:placeholder-shown) ~.main-input-label{
+    top:-0.7rem;
+    font-size: 0.8rem;
+    left: 1.2rem;
+    color: $secondary-color;
+  }
+
+  .main-input-error:focus ~ .main-input-label,
+  .main-input-error:not(:placeholder-shown) ~.main-input-label{
+    top:-0.7rem;
+    font-size: 0.8rem;
+    left: 1.2rem;
+    color: $error-color;
+  }
+  .last-block {
+    margin-bottom: -7px;
+  }
+}
+
+
+//SELECT BLOCK
+
+.select-block {
+  position: relative;
+  width: 380px;
+  text-align: left;
+  margin: 0 auto;
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  p.helper-text-position {
+    bottom: 0;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+  }
+}
+
+
+
+// RADIO BUTTONS STYLES
+.radio-btn-container {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+// Hide the browser's default radio button
+.radio-btn-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+//Create a custom radio button
+.checkmark {
+  position: absolute;
+  margin-top: 2px;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  border: 1px solid $input-border;
+  border-radius: 50%;
+  margin-left: -0.3px;
+}
+
+.checkmarkError {
+  position: absolute;
+  margin-top: 2px;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  border: 1px solid $error-color;
+  border-radius: 50%;
+  margin-left: -0.3px;
+}
+
+// Create the indicator (hidden when not checked)
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+// Show the indicator when checked
+.radio-btn-container input:checked ~ .checkmark:after {
+  display: block;
+
+}
+
+// Style the indicator
+.radio-btn-container .checkmark:after {
+  top: 4.5px;
+  left: 4.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $secondary-color;
+}
+
+// Change radio button border to blue when checked
+input:checked ~ .checkmark {
+  border: 1px solid $secondary-color;
+}
+
+
+//SIGHT UP BUTTON
+.signup-form-btn {
+  @extend %font;
+  @extend %btn-on-click-effect;
+  margin: 0 auto 178px;
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  &:disabled {
+    background-color: #B4B4B4;
+    color: #fff;
+  }
+}
+
+input{
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 26px;
+  color: $grey-color;
+}
+
+//UPLOAD BUTTON
+
+.upload-btn-block {
+  position: relative;
+  width: 402px;
+  text-align: left;
+  margin: 40px auto 79px;
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid $black-color;
+  padding: 15px 14px 15px;
+  top: 15px;
+  left: 10px;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 26px;
+  height: 26.5px;
+}
+
+.upload-label {
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  border: 1px solid $input-border;
+  color: $grey-color;
+  border-left: none;
+  left: 92px;
+  padding: 13px 0 12.5px 17px;
+  border-radius: 0 4px 4px 0;
+  font-size: 16px;
+  line-height: 26px;
+  top: 0.5px;
+  width: 280px;
+  height: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@-moz-document url-prefix() {
+  .upload-label {
+    top: 1px;
+    width: 280px;
+    height: 27px;
+    left: 91px;
+  }
+}
+
+.upload-label:hover {
+  border: 1px solid $black-color;
+  border-left: none;
+}
+
+.footprint-container {
+  position: relative;
+  max-width: 64rem;
+  margin: 0 auto;
+  img {
+    position: absolute;
+    right: -507px;
+    bottom: -0.1px;
+    padding: 0;
+  }
+}
+
+.inputFileUploadError {
+  position: absolute;
+  display: inline-block;
+  border: 2px solid $error-color;
+  color: $grey-color;
+  border-left: none;
+  top: 0;
+  padding: 12px 0 12.5px 25px;
+  border-radius: 0 4px 4px 0;
+  font-size: 16px;
+  line-height: 26px;
+  width: 279px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  float: right;
+  cursor: pointer;
+}
+
+.buttonFileUploadError {
+  position: relative;
+  outline: none !important;
+  border: 2px solid $error-color;
+  background: transparent;
+  padding: 15px 14px 14px;
+  top: 15px;
+  left: 10px;
+  border-radius: 4px 0 0 4px;
+  cursor: pointer;
+  @extend %font;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fileUploaded {
+  color: $black-color;
+}
+
+.helper-text {
+  position: absolute;
+  top: 2.7rem;
+  left: 1.6rem;
+  font-size: 0.8rem;
+}
+
+
+//BIG SCREEN
+@media all and (min-width: 2500px) {
+  .footprint-container {
+    position: relative;
+    max-width: 64rem;
+    margin: 0 auto;
+    img {
+      position: absolute;
+      right: -530px;
+      bottom: -0.1px;
+      padding: 0;
+    }
+  }
+}
+
+//TABLET SCREEN
+@media all and (max-width: 1000px) {
+  .registration-main-block {
+    h3 {
+      margin-left: -17px;
+    }
+  }
+
+  input.main-input {
+    height: 55px;
+    margin-top: 0;
+    margin-bottom: 49px;
+  }
+
+  form .main-input-label {
+    padding: 2px 7px;
+  }
+
+  .footprint-container img {
+      left: 300px;
+  }
+
+  .inputFileUploadError {
+    top: -0.5px;
+  }
+
+  .footprint-container {
+    position: relative;
+    max-width: 64rem;
+    margin: 0 auto;
+    img {
+      position: absolute;
+      left: 292px;
+      bottom: -0.1px;
+      padding: 0;
+    }
+  }
+}
+
+
+//MOBILE SCREEN
+@media all and (max-width: 400px) {
+  .second-section {
+    height: 750px;
+  }
+  .registration-main-block {
+    h2 {
+      max-width: 18rem;
+      padding-top: 145px;
+      padding-left: 35px;
+    }
+    h3 {
+      padding-left: 16px;
+    }
+  }
+
+  .main-input-block {
+    max-width: 350px;
+  }
+  form .main-input {
+    max-width: 20.5rem;
+    padding-left: 10px;
+    margin-left: 7px;
+
+  }
+  form .main-input-error {
+    max-width: 20rem;
+  }
+  form .main-input-label {
+    padding-left: 12px;
+  }
+
+
+  .select-block {
+    max-width: 350px;
+    margin-left: 0;
+    padding-left: 15px;
+  }
+
+  .upload-btn {
+    margin-left: 6px;
+    z-index: 1;
+  }
+
+  .upload-label {
+    max-width: 228px;
+    padding-left: 23px;
+    height: 26.5px;
+  }
+
+  .inputFileUploadError {
+    height: 26.5px;
+    width: 223px;
+  }
+
+  .signup-form-btn {
+    margin-left: 105px;
+    margin-bottom: 148px;
+  }
+
+  .footprint-container {
+    img {
+      position: absolute;
+      bottom: 0;
+      padding: 0;
+      left: 30px;
+      width: 680px;
+    }
+  }
+
+  .main-input-block {
+    .main-input:focus ~ .main-input-label,
+    .main-input:not(:placeholder-shown) ~.main-input-label{
+      left: 1.5rem;
+    }
+
+    .main-input-error:focus ~ .main-input-label,
+    .main-input-error:not(:placeholder-shown) ~.main-input-label{
+      left: 1.5rem;
+
+    }
+  }
+}
+
+

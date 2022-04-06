@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Navbar from "./components/Navbar/Navbar";
+import Description from "./components/Description/Description";
+import Footer from "./components/Footer/Footer";
+import UsersContainer from "./components/Users/UsersContainer";
+import {Provider} from "react-redux";
+import store from "./redux/redux-store";
+import RegistrationContainer from "./components/Registration/RegistrationContainer";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div className={"container"}>
+          <div className={"main-container"}>
+              <Navbar />
+              <Description />
+              <Provider store={store}>
+                  <UsersContainer />
+                  <RegistrationContainer />
+              </Provider>
+              <Footer />
+          </div>
+      </div>
+  )
+  ;
 }
 
 export default App;
